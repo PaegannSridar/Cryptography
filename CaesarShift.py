@@ -41,6 +41,6 @@ def auto_decrypt_caesar_cipher(ciphertext):
 
 
 # Example usage
-ciphertext = 'LYPGFFFOL'
+ciphertext = input("Enter ciphertext: ")
 auto_decrypt_caesar_cipher(ciphertext)
 
