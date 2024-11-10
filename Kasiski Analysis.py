@@ -42,23 +42,17 @@ def kasiski_analysis(ciphertext, min_pattern_length=3):
 
     return kasiski_results
 
+ciphertext = input("Enter the ciphertext: ")
 
-def main():
-    ciphertext = input("Enter the ciphertext: ")
+results = kasiski_analysis(ciphertext, min_pattern_length=3)
 
-    results = kasiski_analysis(ciphertext, min_pattern_length=3)
-
-    print("\nKasiski Analysis Results:")
-    if not results:
-        print("No repeating patterns found.")
-    else:
-        for seq, (positions, distances, gcd_value) in results.items():
-            print(f"Pattern: {seq}")
-            print(f"Positions: {positions}")
-            print(f"Distances: {distances}")
-            print(f"GCD of distances (possible keyword length): {gcd_value}")
-            print()
-
-
-if __name__ == "__main__":
-    main()
+print("\nKasiski Analysis Results:")
+if not results:
+    print("No repeating patterns found.")
+else:
+    for seq, (positions, distances, gcd_value) in results.items():
+        print(f"Pattern: {seq}")
+        print(f"Positions: {positions}")
+        print(f"Distances: {distances}")
+        print(f"GCD of distances (possible keyword length): {gcd_value}")
+        print()
