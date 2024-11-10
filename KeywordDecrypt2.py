@@ -32,7 +32,7 @@ def decrypt(ciphertext, keyword):
     return plaintext
 
 
-ciphertext = "AHKLE XRMHP XKLXT LMAHK LEXRL NKKXR XGZET GWFRW XTKFK LEHOX ETVXB PTLNG LNKXA HPMHT WWKXL LRHNL HBAHI XMATM MABLE XMMXK"
-keyword = "BABBAGE"
+ciphertext = input("Enter the ciphertext: ")
+keyword = input("Enter the possible keyword: ")
 decrypted_text = decrypt(ciphertext, keyword)
 print("Decrypted text:", decrypted_text)
